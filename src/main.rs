@@ -5,8 +5,7 @@ mod day3;
 fn main() {
     let args: Vec<_> = std::env::args().collect();
     if args.len() != 3 {
-        println!("Usage: {} <day> <part>", args[0]);
-        return;
+        panic!("Usage: {} <day> <part>", args[0]);
     }
 
     println!(

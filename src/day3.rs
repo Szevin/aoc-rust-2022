@@ -4,21 +4,21 @@ pub fn solve_a() -> u32 {
         .lines()
         .flat_map(|s| {
             let (first, second) = s.split_at(s.len() / 2);
-            let mut res: Vec<char> = std::vec![];
 
-            for substr in second.split("") {
-                if first.contains(substr) && substr != "" {
-                    for c in substr.chars() {
-                        if !res.contains(&c) {
-                            res.push(c)
-                        }
-                    }
-                }
-            }
-
-            return res;
+            second
+                .chars()
+                .into_iter()
+                .filter(move |c| first.chars().collect::<Vec<char>>().contains(c))
+                .collect::<std::collections::HashSet<_>>()
         })
-        .map(|i| (i as u32 - 48))
+        .map(|c| {
+            if c.is_lowercase() {
+                (c as u8) - (b'a' - 1)
+            } else {
+                (c as u8) + 27 - (b'A')
+            }
+        })
+        .map(|x| x as u32)
         .sum()
 }
 
