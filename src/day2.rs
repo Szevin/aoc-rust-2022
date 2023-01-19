@@ -1,9 +1,8 @@
 use std::fs::read_to_string;
 
-pub fn solve_a() {
-    let file = read_to_string("./input/day2.txt").expect("Cannot find file!");
-
-    let sum = file
+pub fn solve_a() -> u32 {
+    read_to_string("./input/day2.txt")
+        .expect("Cannot find file!")
         .split("\n")
         .map(|s| match s {
             "A X" => 1 + 3,
@@ -19,14 +18,12 @@ pub fn solve_a() {
             "C Z" => 3 + 3,
             _ => 0,
         })
-        .sum::<u32>();
-    println!("{}", sum);
+        .sum::<u32>()
 }
 
-pub fn solve_b() {
-    let file = read_to_string("./input/day2.txt").expect("Cannot find file!");
-
-    let sum = file
+pub fn solve_b() -> u32 {
+    read_to_string("./input/day2.txt")
+        .expect("Cannot find file!")
         .split("\n")
         .map(|s| match s {
             "A X" => 3 + 0,
@@ -42,7 +39,5 @@ pub fn solve_b() {
             "C Z" => 1 + 6,
             _ => 0,
         })
-        .sum::<u32>();
-
-    println!("{}", sum);
+        .sum::<u32>()
 }
