@@ -1,4 +1,4 @@
-pub fn solve_a() -> u32 {
+pub fn solve_a() -> String {
     std::fs::read_to_string("./input/day1.txt")
         .expect("Unable to read file!")
         .split("\n\n")
@@ -10,9 +10,10 @@ pub fn solve_a() -> u32 {
         })
         .max()
         .unwrap()
+        .to_string()
 }
 
-pub fn solve_b() -> u32 {
+pub fn solve_b() -> String {
     let mut res: Vec<u32> = std::fs::read_to_string("./input/day1.txt")
         .expect("Unable to read file!")
         .split("\n\n")
@@ -25,5 +26,5 @@ pub fn solve_b() -> u32 {
 
     res.sort_by(|a, b| b.cmp(a));
 
-    res.iter().take(3).sum::<u32>()
+    res.iter().take(3).sum::<u32>().to_string()
 }

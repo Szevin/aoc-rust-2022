@@ -1,4 +1,4 @@
-pub fn solve_a() -> u32 {
+pub fn solve_a() -> String {
     std::fs::read_to_string("input/day3.txt")
         .expect("File not found!")
         .lines()
@@ -19,10 +19,11 @@ pub fn solve_a() -> u32 {
             }
         })
         .map(|x| x as u32)
-        .sum()
+        .sum::<u32>()
+        .to_string()
 }
 
-pub fn solve_b() -> u32 {
+pub fn solve_b() -> String {
     std::fs::read_to_string("input/day3.txt")
         .expect("File not found!")
         .lines()
@@ -49,5 +50,6 @@ pub fn solve_b() -> u32 {
             }
         })
         .map(|x| x as u32)
-        .sum()
+        .sum::<u32>()
+        .to_string()
 }

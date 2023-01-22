@@ -1,6 +1,6 @@
 use std::fs::read_to_string;
 
-pub fn solve_a() -> u32 {
+pub fn solve_a() -> String {
     read_to_string("./input/day2.txt")
         .expect("Cannot find file!")
         .split("\n")
@@ -19,9 +19,10 @@ pub fn solve_a() -> u32 {
             _ => 0,
         })
         .sum::<u32>()
+        .to_string()
 }
 
-pub fn solve_b() -> u32 {
+pub fn solve_b() -> String {
     read_to_string("./input/day2.txt")
         .expect("Cannot find file!")
         .split("\n")
@@ -40,4 +41,5 @@ pub fn solve_b() -> u32 {
             _ => 0,
         })
         .sum::<u32>()
+        .to_string()
 }
