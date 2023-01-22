@@ -17,7 +17,7 @@ fn default_cargo() -> [Vec<char>; 9] {
 }
 
 pub fn solve_a() -> String {
-    std::fs::read_to_string("input/day5.txt")
+    std::fs::read_to_string("src/input/day5.txt")
         .expect("File not found!")
         .lines()
         .map(|s| s.split(" ").collect::<Vec<&str>>())
@@ -49,7 +49,7 @@ pub fn solve_a() -> String {
 }
 
 pub fn solve_b() -> String {
-    std::fs::read_to_string("input/day5.txt")
+    std::fs::read_to_string("src/input/day5.txt")
         .expect("File not found!")
         .lines()
         .map(|s| s.split(" ").collect::<Vec<&str>>())

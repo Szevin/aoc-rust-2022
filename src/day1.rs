@@ -1,5 +1,5 @@
 pub fn solve_a() -> String {
-    std::fs::read_to_string("./input/day1.txt")
+    std::fs::read_to_string("src/input/day1.txt")
         .expect("Unable to read file!")
         .split("\n\n")
         .map(|elf| {
@@ -14,7 +14,7 @@ pub fn solve_a() -> String {
 }
 
 pub fn solve_b() -> String {
-    let mut res: Vec<u32> = std::fs::read_to_string("./input/day1.txt")
+    let mut res: Vec<u32> = std::fs::read_to_string("src/input/day1.txt")
         .expect("Unable to read file!")
         .split("\n\n")
         .map(|elf| {

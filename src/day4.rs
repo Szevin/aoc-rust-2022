@@ -1,5 +1,5 @@
 pub fn solve_a() -> String {
-    std::fs::read_to_string("input/day4.txt")
+    std::fs::read_to_string("src/input/day4.txt")
         .expect("File not found!")
         .lines()
         .map(|s| s.split_once(",").unwrap())
@@ -24,7 +24,7 @@ pub fn solve_a() -> String {
 }
 
 pub fn solve_b() -> String {
-    std::fs::read_to_string("input/day4.txt")
+    std::fs::read_to_string("src/input/day4.txt")
         .expect("File not found!")
         .lines()
         .map(|s| s.split_once(",").unwrap())

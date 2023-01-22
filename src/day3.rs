@@ -1,5 +1,5 @@
 pub fn solve_a() -> String {
-    std::fs::read_to_string("input/day3.txt")
+    std::fs::read_to_string("src/input/day3.txt")
         .expect("File not found!")
         .lines()
         .flat_map(|s| {
@@ -24,7 +24,7 @@ pub fn solve_a() -> String {
 }
 
 pub fn solve_b() -> String {
-    std::fs::read_to_string("input/day3.txt")
+    std::fs::read_to_string("src/input/day3.txt")
         .expect("File not found!")
         .lines()
         .collect::<Vec<&str>>()
