@@ -3,6 +3,7 @@ mod day2;
 mod day3;
 mod day4;
 mod day5;
+mod day6;
 
 fn main() {
     let args: Vec<_> = std::env::args().collect();
@@ -36,6 +37,11 @@ fn main() {
             "5" => match args[2].as_str() {
                 "a" => day5::solve_a(),
                 "b" => day5::solve_b(),
+                _ => panic!("Unknown part {}", args[2]),
+            },
+            "6" => match args[2].as_str() {
+                "a" => day6::solve_a(),
+                "b" => day6::solve_b(),
                 _ => panic!("Unknown part {}", args[2]),
             },
             _ => panic!("Unknown day {}", args[1]),

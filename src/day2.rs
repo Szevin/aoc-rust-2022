@@ -2,7 +2,7 @@ use std::fs::read_to_string;
 
 pub fn solve_a() -> String {
     read_to_string("src/input/day2.txt")
-        .expect("Cannot find file!")
+        .expect("File not found!")
         .split("\n")
         .map(|s| match s {
             "A X" => 1 + 3,
@@ -24,7 +24,7 @@ pub fn solve_a() -> String {
 
 pub fn solve_b() -> String {
     read_to_string("src/input/day2.txt")
-        .expect("Cannot find file!")
+        .expect("File not found!")
         .split("\n")
         .map(|s| match s {
             "A X" => 3 + 0,
