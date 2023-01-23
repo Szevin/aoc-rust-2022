@@ -1,6 +1,7 @@
+const INPUT: &str = include_str!(".\\input\\day1.txt");
+
 pub fn solve_a() -> String {
-    std::fs::read_to_string("src/input/day1.txt")
-        .expect("File not found!")
+    INPUT
         .split("\n\n")
         .map(|elf| {
             elf.lines()
@@ -14,8 +15,7 @@ pub fn solve_a() -> String {
 }
 
 pub fn solve_b() -> String {
-    let mut res: Vec<u32> = std::fs::read_to_string("src/input/day1.txt")
-        .expect("File not found!")
+    let mut res: Vec<u32> = INPUT
         .split("\n\n")
         .map(|elf| {
             elf.lines()

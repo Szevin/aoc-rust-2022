@@ -1,6 +1,7 @@
+const INPUT: &str = include_str!(".\\input\\day4.txt");
+
 pub fn solve_a() -> String {
-    std::fs::read_to_string("src/input/day4.txt")
-        .expect("File not found!")
+    INPUT
         .lines()
         .map(|s| s.split_once(",").unwrap())
         .map(|(f, s)| (f.split_once("-").unwrap(), s.split_once("-").unwrap()))
@@ -24,8 +25,7 @@ pub fn solve_a() -> String {
 }
 
 pub fn solve_b() -> String {
-    std::fs::read_to_string("src/input/day4.txt")
-        .expect("File not found!")
+    INPUT
         .lines()
         .map(|s| s.split_once(",").unwrap())
         .map(|(f, s)| (f.split_once("-").unwrap(), s.split_once("-").unwrap()))

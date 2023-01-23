@@ -1,6 +1,7 @@
+const INPUT: &str = include_str!(".\\input\\day3.txt");
+
 pub fn solve_a() -> String {
-    std::fs::read_to_string("src/input/day3.txt")
-        .expect("File not found!")
+    INPUT
         .lines()
         .flat_map(|s| {
             let (first, second) = s.split_at(s.len() / 2);
@@ -24,8 +25,7 @@ pub fn solve_a() -> String {
 }
 
 pub fn solve_b() -> String {
-    std::fs::read_to_string("src/input/day3.txt")
-        .expect("File not found!")
+    INPUT
         .lines()
         .collect::<Vec<&str>>()
         .chunks(3)

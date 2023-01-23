@@ -1,8 +1,7 @@
+const INPUT: &str = include_str!(".\\input\\day6.txt");
+
 fn find_distinct_set_by_width(width: usize) -> usize {
-    let input = std::fs::read_to_string("src/input/day6.txt")
-        .expect("File not found!")
-        .chars()
-        .collect::<Vec<char>>();
+    let input = INPUT.chars().collect::<Vec<char>>();
 
     let mut index = width;
     while index < input.len() {
